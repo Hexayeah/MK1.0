@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/base.css">
+    <link rel="stylesheet" href="lib/css/main.css">
+    <link rel="stylesheet" href="lib/css/customView.css"></head>
+
+<body>
+    <section class="body">
+        <header>
+            <!--头部-->
+            <div class="framework-topbar">
+                <div class="mk-console-topbar">
+                    <div class="topbar-wrap clearfix">
+                        <div class="topbar-head FL">
+                            <a href="javascript:;" class="topbar-logo"></a>
+                        </div>
+                        <div class="topbar-info FR clearfix">
+                            <div class="user-name FL">Hello,UserName</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar-line"></div>
+            </div>
+        </header>
+        <section class="framework-body mk-sidebar-full">
+            <section class="mk-sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-inner">
+                        <div class="sidebar-nav can-fold sidebar-nav-fold">
+                            <div class="sidebar-title">
+                                <a href="javascript:;">
+                                    <div class="flag"></div>
+                                    <div class="nav-icon">
+                                        <span class="icon-sskb"></span>
+                                    </div>
+                                    <div class="nav-title">实时看板</div>
+                                    <span class="sidebar-title-icon icon-arrow-down"></span>
+                                </a>
+                            </div>
+                            <ul class="sidebar-trans clearfix">
+                                <li class="nav-item">
+                                    <a href="javascript:;" class="selected">
+                                        <div class="nav-title">实时看板</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:;">
+                                        <div class="nav-title">实时看板</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:;" class="disabled">
+                                        <div class="nav-title">实时看板</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="k-window-content"></div>
+            </section>
+            <section class="framework-product">
+                <div id="app"></div>
+            </section>
+        </section>
+    </section>
+
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/vue.min.js"></script>
+    <script src="dist/main.js"></script>
+    <script type="text/javascript">
+        $(".mk-sidebar-full .sidebar-nav.can-fold .sidebar-title").click(function () {
+            var parent = $(this);
+            while (parent && !parent.hasClass('sidebar-nav')) {
+                parent = parent.parent();
+            }
+            parent.toggleClass("sidebar-nav-fold");
+            parent.find(".sidebar-title a").first().toggleClass("selected");
+        });
+    </script>
+</body>
+</html>
