@@ -1,11 +1,7 @@
 .ease-trans {
     -webkit-transition: all 0.12s ease, 0.12s ease;
-       -moz-transition: all 0.12s ease, 0.12s ease;
-        -ms-transition: all 0.12s ease, 0.12s ease;
-         -o-transition: all 0.12s ease, 0.12s ease;
-            transition: all 0.12s ease, 0.12s ease;
+    transition: all 0.12s ease, 0.12s ease;
 }
-
 
 .c-view {
     position: absolute;
@@ -55,7 +51,9 @@
     border: none;
 }
 
+
 /*控件列表*/
+
 .cv-mRegion {
     position: absolute;
     left: 0;
@@ -65,6 +63,7 @@
     background-color: #fff;
     border-right: 1px solid #dce1e6;
     overflow-x: hidden;
+    z-index: 2;
 }
 
 .accordion {
@@ -82,7 +81,7 @@
     margin-bottom: 4px;
 }
 
-.accordion .acc-head a{
+.accordion .acc-head a {
     line-height: 40px;
     height: 40px;
     display: block;
@@ -171,9 +170,13 @@
     padding: 0;
     overflow: hidden;
 }
+
+
 /*控件列表End*/
 
+
 /*控件信息详情*/
+
 .cv-iRegion {
     position: absolute;
     right: 0;
@@ -183,6 +186,7 @@
     width: 401px;
     background-color: #fff;
     overflow: auto;
+    z-index: 2;
 }
 
 .iTitleBox {
@@ -224,19 +228,21 @@
     border-bottom: 6px solid #f9f9f9;
 }
 
-.iHelpBox.fold
-, .iHelpBox.fold:after {
+.iHelpBox.fold,
+.iHelpBox.fold:after {
     padding-top: 0;
     padding-bottom: 0;
     height: 0;
     overflow: hidden;
 }
+
+
 /*控件信息详情End*/
+
 .cv-viewBox {
     padding: 0 401px 0 210px;
     position: relative;
     height: 100%;
-    z-index: -1;
 }
 
 .vb-wrap {
@@ -264,16 +270,15 @@
     position: absolute;
     width: 320px;
     z-index: 1;
-    overflow: auto;
     padding-bottom: 44px;
+    overflow: auto;
+    background-color: #f4f4f4;
 }
 
 .vb-body::-webkit-scrollbar {
     width: 4px;
     background: #949494;
     -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
 

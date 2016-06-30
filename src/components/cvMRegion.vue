@@ -170,13 +170,24 @@
                 age:"2q1"
             }
         },
+        props: ['dataid', 'addtype', 'isadd'],
         ready () {
+            let _this = this;
             $(".accordion .acc-group .acc-head").click(function () {
                 var parent = $(this);
                 while (parent && !parent.hasClass('acc-group')) {
                     parent = parent.parent();
                 }
                 parent.toggleClass("fold");
+            });
+
+            $(".accordion .acc-group li").click(function () {
+                var parent = $(this);
+                while (parent && !parent.is('li')) {
+                    parent = parent.parent();
+                }
+                _this.addtype = parent.attr("data-type");
+                _this.isadd = true;
             });
         }
     }
